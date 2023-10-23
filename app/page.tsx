@@ -15,12 +15,23 @@ export default async function Page() {
     <>
       <section className={styles.top}>
         <div>
-          <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
+          <h1 className={styles.title}>
+            <ruby className={styles.ruby}>
+              Live one day at a time
+              <rt className={styles.rt}>その日その日を好きな夢をみて暮らすこと</rt>
+            </ruby>
+          </h1>
           <p className={styles.description}>
-            私たちは市場をリードしているグローバルテックカンパニーです。
+            頭の冴えを取り戻そう
+            <br />
+            まどろみの中で働いてもこの世界は変わらないから
+            <br />
+            明日のことを気にする必要もないぐらい、今を大切に生きることができる
+            <br />
+            リブコネが目指すのは「その日その日を好きな夢をみて暮らすこと」です
           </p>
         </div>
-        <Image className={styles.bgimg} src="/img-mv.jpg" alt="" width={3600} height={1200} />
+        <Image className={styles.bgimg} src="/new-img-mv.jpg" alt="" width={3600} height={1200} />
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
@@ -35,9 +46,9 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-              当社は、次世代テクノロジーの研究開発・製造・販売を行う革新的な企業です。
+              リブコネはゲーミフィケーションを取り入れたWEBアプリケーション開発を行っているスタートアップです。
               <br />
-              AI、ロボット工学、自律システムなど、幅広い分野でのソリューション提供を通じて、社会の進化と未来の創造に貢献します。
+              また、JamstackによるWEBサイト制作、DAO構築、自社メディア運営を行っています。
             </p>
             <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
@@ -64,31 +75,35 @@ export default async function Page() {
               <h2 className={styles.sectionTitleEn}>About Us</h2>
               <p className={styles.sectionTitleJa}>私たちについて</p>
               <p className={styles.sectionDescription}>
-                「テクノロジーの力で世界を変える」をミッションに掲げ、日々活動をしています。
+                リブコネは「その日その日を好きな夢をみて暮らすこと」を目指しています。
+                <br />
+                ゲーミフィケーションによって、好きな夢をみて暮らす人々を増やします。
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
-                <dd className={styles.infoDescription}>株式会社Simple</dd>
+                <dd className={styles.infoDescription}>合同会社リブコネ</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>設立</dt>
-                <dd className={styles.infoDescription}>2023年4月</dd>
+                <dd className={styles.infoDescription}>2023年9月</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>所在地</dt>
                 <dd className={styles.infoDescription}>
-                  〒000-0000
+                  〒812-0016
                   <br />
-                  東京都渋谷区渋谷1-1-1
+                  福岡県福岡市博多区博多駅南
+                  <br />
+                  ２丁目９番１５－７１６号
                 </dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>代表者</dt>
-                <dd className={styles.infoDescription}>鈴木 太郎</dd>
+                <dd className={styles.infoDescription}>山名 雄貴</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>1,000万円</dd>
+                <dd className={styles.infoDescription}>30万円</dd>
               </dl>
             </div>
           </div>
@@ -100,7 +115,7 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>We are hiring</h2>
             <p className={styles.sectionTitleJa}>採用情報</p>
             <p className={styles.sectionDescription}>
-              当社では、チャレンジ精神を持った人材を求めています。
+              当社では、を求めています。
               <br />
               新しいアイデアを出し合い、成長する環境で活躍したい方は、ぜひご応募ください。当社でのキャリアを築きながら、技術の最前線で力を発揮しましょう。
             </p>

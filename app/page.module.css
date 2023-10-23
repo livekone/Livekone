@@ -17,7 +17,7 @@
 }
 
 .description {
-  text-align: center;
+  text-align: left;
 }
 
 .bgimg {
@@ -247,4 +247,15 @@
     background: url('/arrow-right.svg') no-repeat right 20px center, var(--color-button-primary);
     color: var(--color-text-unpainted);
   }
+}
+
+.rt {
+  font-size: 12px;
+  position: relative;
+  top: 0.8em;
+  transform: translateY(0.8em);
+}
+
+.ruby {
+  ruby-position: under;
 }

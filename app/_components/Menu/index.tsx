@@ -23,11 +23,11 @@ export default function Menu() {
               事業内容
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/members" onClick={close}>
               メンバー
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="" onClick={close}>
               採用情報
