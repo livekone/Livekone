@@ -53,8 +53,8 @@ export default async function Page({ searchParams }: Props) {
       )}
       <div className={styles.footer}>
         <h2 className={styles.message}>We are hiring</h2>
-        <p>私たちは共にチャレンジする仲間を募集しています。</p>
-        <ButtonLink href="">採用情報へ</ButtonLink>
+        <p>最先端の技術を取り入れたスタートアップで共に働きましょう。</p>
+        <ButtonLink href="/contact">お問い合わせへ</ButtonLink>
       </div>
     </div>
   );

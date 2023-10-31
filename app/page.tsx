@@ -77,7 +77,7 @@ export default async function Page() {
               <p className={styles.sectionDescription}>
                 リブコネは「その日その日を好きな夢をみて暮らすこと」を目指しています。
                 <br />
-                ゲーミフィケーションによって、好きな夢をみて暮らす人々を増やします。
+                ゲーミフィケーションによって、効率の良い働き方を突き詰め、誰もが夢を追いかけられる世界を創造します。
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
@@ -115,11 +115,11 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>We are hiring</h2>
             <p className={styles.sectionTitleJa}>採用情報</p>
             <p className={styles.sectionDescription}>
-              当社では、を求めています。
+              リブコネではフロー状態に入ることができる人材を求めています。
               <br />
-              新しいアイデアを出し合い、成長する環境で活躍したい方は、ぜひご応募ください。当社でのキャリアを築きながら、技術の最前線で力を発揮しましょう。
+              効率の良い働き方を突き詰め、集中できる環境で活躍したい方は、ぜひご応募ください。最先端の技術を取り入れたスタートアップで共に働きましょう。
             </p>
-            <ButtonLink href="">採用情報へ</ButtonLink>
+            <ButtonLink href="/contact">お問い合わせへ</ButtonLink>
           </div>
           <Image
             className={styles.hiringImg}

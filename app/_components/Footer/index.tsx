@@ -13,9 +13,6 @@ export default function Footer() {
             <Link href="/members">メンバー</Link>
           </li>
           <li className={styles.item}>
-            <Link href="">採用情報</Link>
-          </li>
-          <li className={styles.item}>
             <Link href="/contact">お問い合わせ</Link>
           </li>
         </ul>
