@@ -31,7 +31,7 @@ export default async function Page() {
             リブコネが目指すのは「その日その日を好きな夢をみて暮らすこと」です
           </p>
         </div>
-        <Image className={styles.bgimg} src="/new-img-mv.jpg" alt="" width={3600} height={1200} />
+        <Image className={styles.bgimg} src="/new-img-mv.gif" alt="" width={3600} height={1200} />
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
