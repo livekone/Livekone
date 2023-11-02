@@ -13,13 +13,13 @@ export default function NewsListItem({ news }: Props) {
   return (
     <li className={styles.list}>
       <Link href={`/news/${news.id}`} className={styles.link}>
-        {news.thumbnail ? (
+        {news.eyecatch ? (
           <Image
-            src={news.thumbnail?.url}
+            src={news.eyecatch?.url}
             alt=""
             className={styles.image}
-            width={news.thumbnail?.width}
-            height={news.thumbnail?.height}
+            width={news.eyecatch?.width}
+            height={news.eyecatch?.height}
           />
         ) : (
           <Image
