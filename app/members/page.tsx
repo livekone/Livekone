@@ -15,13 +15,7 @@ export default async function Page({ searchParams }: Props) {
     <div className={styles.container}>
       <ul>
         <li key="1" className={styles.list}>
-          <Image
-            src="/edit - IMG_0586.png"
-            alt=""
-            width={1024}
-            height={1024}
-            className={styles.image}
-          />
+          <Image src="/ceo.png" alt="" width={1024} height={1024} className={styles.image} />
           <dl>
             <dt className={styles.name}>山名 雄貴</dt>
             <dd className={styles.position}>CEO</dd>
