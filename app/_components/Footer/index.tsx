@@ -10,6 +10,9 @@ export default function Footer() {
             <Link href="/news">ニュース</Link>
           </li>
           <li className={styles.item}>
+            <Link href="/business">事業内容</Link>
+          </li>
+          <li className={styles.item}>
             <Link href="/members">代表挨拶</Link>
           </li>
           <li className={styles.item}>
@@ -17,7 +20,7 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      <p className={styles.cr}>© SIMPLE. All Rights Reserved 2023</p>
+      <p className={styles.cr}>© Livekone Inc. All Rights Reserved 2023</p>
     </footer>
   );
 }

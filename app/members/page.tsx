@@ -19,7 +19,14 @@ export default async function Page({ searchParams }: Props) {
           <dl>
             <dt className={styles.name}>山名 雄貴</dt>
             <dd className={styles.position}>CEO</dd>
-            <dd className={styles.profile}>社長です</dd>
+            <dd className={styles.profile}>
+              合同会社リブコネはゲーミフィケーションを取り入れたWEBアプリケーション開発を行っているスタートアップです。
+              <br />
+              私はこれからの時代に承認欲求の競争ではない起業家のエンタメが必要だと考えています。
+              <br />
+              インフルエンサーとIT技術をかけあわせ「その日その日を好きな夢をみて暮らすこと」を目指します。
+              <br />
+            </dd>
           </dl>
         </li>
       </ul>
