@@ -5,6 +5,10 @@ import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
+export const metadata = {
+  title: '合同会社リブコネ',
+};
+
 export const revalidate = 60;
 
 export default async function Page() {
