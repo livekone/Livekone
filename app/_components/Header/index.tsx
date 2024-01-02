@@ -8,7 +8,7 @@ export default function Header() {
     <header className={styles.header}>
       <Link href="/" className={styles.logoLink}>
         <Image
-          src="/livekone.png"
+          src="/livekone.svg"
           alt="SIMPLE"
           className={styles.logo}
           width={348}
