@@ -4,6 +4,10 @@
   gap: 40px;
 }
 
+.itemsTop {
+  display: none;
+}
+
 .button {
   display: none;
 }
@@ -28,6 +32,10 @@
   .items {
     flex-direction: column;
     gap: 24px;
+  }
+
+  .itemsTop {
+    display: list-item;
   }
 
   .button {
