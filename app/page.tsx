@@ -89,7 +89,7 @@ export default async function Page() {
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>設立</dt>
-                <dd className={styles.infoDescription}>2023年9月</dd>
+                <dd className={styles.infoDescription}>２０２３年９月１５日</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>所在地</dt>
@@ -107,7 +107,7 @@ export default async function Page() {
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>30万円</dd>
+                <dd className={styles.infoDescription}>３０万円</dd>
               </dl>
             </div>
           </div>
