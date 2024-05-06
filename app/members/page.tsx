@@ -22,9 +22,36 @@ export default async function Page({ searchParams }: Props) {
             <dd className={styles.profile}>
               合同会社リブコネはゲーミフィケーションを取り入れたWEBアプリケーション開発を行っているスタートアップです。
               <br />
+              <br />
               私はこれからの時代に承認欲求の競争ではない起業家のエンタメが必要だと考えています。
               <br />
+              <br />
               インフルエンサーとIT技術をかけあわせ「その日その日を好きな夢をみて暮らすこと」を目指します。
+              <br />
+            </dd>
+          </dl>
+        </li>
+        <h2 className={styles.sectionTitleEn}>Member</h2>
+        <p className={styles.sectionTitleJa}>メンバー</p>
+        <li key="2" className={styles.list}>
+          <Image
+            src="/genki_murase.jpg"
+            alt=""
+            width={1024}
+            height={1024}
+            className={styles.image}
+          />
+          <dl>
+            <dt className={styles.name}>村瀬 元旗</dt>
+            <dd className={styles.position}>最高執行責任者(COO)</dd>
+            <dd className={styles.profile}>
+              日常は当たり前でできていると考えています。
+              <br />
+              <br />
+              合同会社リブコネでは当たり前ではないものを作ると同時に、当たり前を創り出していきます。
+              <br />
+              <br />
+              主にデザイン・営業・事業統括業務を担当させていただいております。
               <br />
             </dd>
           </dl>
