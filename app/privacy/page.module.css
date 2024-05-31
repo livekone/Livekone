@@ -1,0 +1,27 @@
+.text {
+  margin-bottom: 40px;
+}
+
+.ol {
+  list-style: decimal;
+  list-style-position: inside;
+  margin-bottom: 40px;
+}
+
+.ol_li {
+  padding: 0 0 0 30px;
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.ol_li_li {
+  padding: 0 0 0 60px;
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+@media (max-width: 640px) {
+  .text {
+    text-align: left;
+  }
+}

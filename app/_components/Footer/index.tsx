@@ -18,6 +18,9 @@ export default function Footer() {
           <li className={styles.item}>
             <Link href="/contact">お問い合わせ</Link>
           </li>
+          <li className={styles.item}>
+            <Link href="/privacy">プライバシーポリシー</Link>
+          </li>
         </ul>
       </nav>
       <p className={styles.cr}>© Livekone Inc. All Rights Reserved 2023</p>
