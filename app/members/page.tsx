@@ -14,11 +14,18 @@ export default async function Page({ searchParams }: Props) {
   return (
     <div className={styles.container}>
       <ul>
+        <h2 className={styles.sectionTitleEn}>代表メッセージ</h2>
         <li key="1" className={styles.list}>
-          <Image src="/ceo.jpg" alt="" width={1024} height={1024} className={styles.image} />
+          <Image
+            src="/yuuki_yamana.jpg"
+            alt=""
+            width={1024}
+            height={1024}
+            className={styles.image}
+          />
           <dl>
             <dt className={styles.name}>山名 雄貴</dt>
-            <dd className={styles.position}>CEO</dd>
+            <dd className={styles.position}>最高経営責任者(CEO)</dd>
             <dd className={styles.profile}>
               合同会社リブコネはゲーミフィケーションを取り入れたWEBアプリケーション開発を行っているスタートアップです。
               <br />
@@ -54,6 +61,19 @@ export default async function Page({ searchParams }: Props) {
               主にデザイン・営業・事業統括業務を担当させていただいております。
               <br />
             </dd>
+          </dl>
+        </li>
+        <li key="3" className={styles.list}>
+          <Image
+            src="/takaaki_obara.jpg"
+            alt=""
+            width={1024}
+            height={1024}
+            className={styles.image}
+          />
+          <dl>
+            <dt className={styles.name}>小原 峰輝</dt>
+            <dd className={styles.position}>最高技術責任者(CTO)</dd>
           </dl>
         </li>
       </ul>
