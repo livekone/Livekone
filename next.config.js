@@ -11,8 +11,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/lp/aiweb/:path*',
-        destination: '/lp/aiweb/dist/:path*', // LPの静的ファイルのパス
+        source: '/lp/aiweb',
+        destination: '/lp/aiweb/index.html',
+      },
+      {
+        source: '/lp/aiweb/',
+        destination: '/lp/aiweb/index.html',
       },
     ];
   },
