@@ -141,7 +141,9 @@ export default function Workflow() {
           {steps.map(({ icon: Icon, title, description, details, color, bgColor, gradient }, index) => (
             <div 
               key={title} 
-              ref={el => stepRefs.current[index] = el}
+              ref={el => {
+                stepRefs.current[index] = el;
+              }}
               className={`relative mb-6 sm:mb-12 last:mb-0 transition-all duration-1000 ${
                 index === activeStep ? 'opacity-100 scale-100' : 'opacity-50 scale-95'
               }`}
