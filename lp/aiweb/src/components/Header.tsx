@@ -6,17 +6,13 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center h-16 sm:h-20">
           {/* Logo */}
-          <a 
+          <a
             href="https://livekone.com/"
             target="_blank"
-            rel="noopener noreferrer" 
+            rel="noopener noreferrer"
             className="flex items-center gap-2"
           >
-            <img 
-              src="/logo.svg" 
-              alt="Livekone" 
-              className="h-8 sm:h-10"
-            />
+            <img src="/lp/aiweb/dist/logo.svg" alt="Livekone" className="h-8 sm:h-10" />
           </a>
         </div>
       </div>

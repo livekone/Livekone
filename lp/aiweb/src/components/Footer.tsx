@@ -8,24 +8,18 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center gap-2 mb-6">
             {/* Logo */}
-            <a 
+            <a
               href="https://livekone.com/"
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <img 
-                src="/logo.svg" 
-                alt="Livekone" 
-                className="h-8 sm:h-10"
-              />
+              <img src="/lp/aiweb/dist/logo.svg" alt="Livekone" className="h-8 sm:h-10" />
             </a>
           </div>
-          
+
           {/* Copyright */}
-          <div className="text-sm text-gray-500">
-            © Livekone Inc. All Rights Reserved 2025
-          </div>
+          <div className="text-sm text-gray-500">© Livekone Inc. All Rights Reserved 2025</div>
         </div>
       </div>
     </footer>
