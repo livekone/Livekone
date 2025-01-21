@@ -8,6 +8,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/lp/aiweb/:path*',
+        destination: '/lp/aiweb/dist/:path*', // LPの静的ファイルのパス
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
