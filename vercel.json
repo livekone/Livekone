@@ -1,12 +1,17 @@
 {
   "rewrites": [
     {
-      "source": "/lp/aiweb",
-      "destination": "/lp/aiweb/index.html"
-    },
-    {
-      "source": "/lp/aiweb/:path*",
-      "destination": "/lp/aiweb/:path*"
+      "source": "/lp/aiweb/(.*)",
+      "destination": "/$1"
     }
-  ]
+  ],
+  "redirects": [],
+  "builds": [
+    {
+      "src": "/lp/aiweb/dist/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "outputDirectory": "/lp/aiweb/dist",
+  "cleanUrls": true
 }
