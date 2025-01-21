@@ -8,6 +8,18 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/lp/aiweb',
+        destination: '/lp/aiweb/index.html',
+      },
+      {
+        source: '/lp/aiweb/',
+        destination: '/lp/aiweb/index.html',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
