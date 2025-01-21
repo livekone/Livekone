@@ -28505,7 +28505,7 @@ function tT() {
                     'text-base sm:text-lg md:text-xl mb-8 sm:mb-16 text-white/90 leading-relaxed',
                   children: [
                     '最新のAI技術と豊富なLP制作実績で、',
-                    m.jsx('br', { className: 'sm:hidden' }),
+                    m.jsx('br', {}),
                     'あなたのビジネスの',
                     m.jsx('span', {
                       className: 'text-rose-400 font-medium',
