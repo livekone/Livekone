@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/lp/aiweb",
+      "destination": "/lp/aiweb/index.html"
+    },
+    {
+      "source": "/lp/aiweb/:path*",
+      "destination": "/lp/aiweb/:path*"
+    }
+  ]
+}
