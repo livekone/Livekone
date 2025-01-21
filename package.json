@@ -33,6 +33,7 @@
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "^8.7.0",
     "highlight.js": "^11.7.0",
+    "lucide-react": "^0.473.0",
     "microcms-js-sdk": "^2.3.3",
     "next": "^13.4.2",
     "prettier": "^2.8.4",
