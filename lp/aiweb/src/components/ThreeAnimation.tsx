@@ -9,7 +9,12 @@ export function ThreeAnimation() {
 
     // Scene setup
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000,
+    );
     camera.position.z = 2;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -36,19 +41,19 @@ export function ThreeAnimation() {
       const goldenRatio = (1 + Math.sqrt(5)) / 2;
       const maxRadius = 2;
       const numSpirals = 5;
-      
+
       for (let i = 0; i < numPoints; i++) {
         const t = i / numPoints;
-        
+
         // Golden spiral formula
         const theta = 2 * Math.PI * goldenRatio * i;
         const radius = maxRadius * Math.pow(t, 0.5); // Square root for more uniform distribution
-        
+
         // Calculate 3D position
         const x = radius * Math.cos(theta);
         const y = radius * Math.sin(theta);
         const z = (t - 0.5) * 2; // Distribute along Z-axis
-        
+
         positions.push(x, y, z);
 
         // Color gradient based on position in spiral
@@ -75,7 +80,10 @@ export function ThreeAnimation() {
       particles = new THREE.BufferGeometry();
       particles.setAttribute('position', new THREE.Float32BufferAttribute(initialPositions, 3));
       particles.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-      particles.setAttribute('speedVariation', new THREE.Float32BufferAttribute(speedVariations, 1));
+      particles.setAttribute(
+        'speedVariation',
+        new THREE.Float32BufferAttribute(speedVariations, 1),
+      );
 
       const particleMaterial = new THREE.PointsMaterial({
         size: 0.01,
@@ -105,8 +113,8 @@ export function ThreeAnimation() {
       // Update particle positions
       for (let i = 0; i < positions.length; i += 3) {
         const index = i / 3;
-        const theta = 2 * Math.PI * index / (positions.length / 3);
-        
+        const theta = (2 * Math.PI * index) / (positions.length / 3);
+
         // Add subtle wave motion (reversed direction)
         positions[i] -= Math.sin(time + theta) * 0.001 * speedVariations[index]; // Changed from += to -=
         positions[i + 1] -= Math.cos(time + theta) * 0.001 * speedVariations[index]; // Changed from += to -=
@@ -137,15 +145,27 @@ export function ThreeAnimation() {
         containerRef.current.removeChild(renderer.domElement);
       }
       scene.remove(particleSystem);
+
+      // Dispose geometry
       particles.dispose();
-      particleSystem.material.dispose();
+
+      // Dispose material(s)
+      if (Array.isArray(particleSystem.material)) {
+        particleSystem.material.forEach((material) => {
+          if (material.dispose) material.dispose();
+        });
+      } else if (particleSystem.material && particleSystem.material.dispose) {
+        particleSystem.material.dispose();
+      }
+
+      // Dispose renderer
       renderer.dispose();
     };
   }, []);
 
   return (
-    <div 
-      ref={containerRef} 
+    <div
+      ref={containerRef}
       className="absolute inset-0 z-0 pointer-events-none"
       style={{ background: 'transparent' }}
     />
