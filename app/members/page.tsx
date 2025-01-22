@@ -50,9 +50,16 @@ export default async function Page({ searchParams }: Props) {
           />
           <dl>
             <dt className={styles.name}>村瀬 元旗</dt>
-            <dd className={styles.position}>最高戦略責任者(CSO)</dd>
+            <dd className={styles.position}>最高執行責任者(COO)</dd>
             <dd className={styles.profile}>
-              成長戦略の策定・実行および市場分析を担当させていただいております。
+              日常は当たり前でできていると考えています。
+              <br />
+              <br />
+              合同会社リブコネでは当たり前ではないものを作ると同時に、当たり前を創り出していきます。
+              <br />
+              <br />
+              主にデザイン・営業・事業統括業務を担当させていただいております。
+              <br />
             </dd>
           </dl>
         </li>
