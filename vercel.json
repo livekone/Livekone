@@ -7,8 +7,9 @@
   ],
   "redirects": [
     {
-      "source": "/",
-      "destination": "https://livekone.com/"
+      "source": "/(.*)",
+      "destination": "https://livekone.com/$1",
+      "permanent": true
     }
   ]
 }
