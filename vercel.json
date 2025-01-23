@@ -8,6 +8,12 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "livek.one"
+        }
+      ],
       "destination": "https://livekone.com/$1",
       "permanent": true
     }
