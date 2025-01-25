@@ -20,6 +20,18 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/lynx',
+        destination: '/lynx/index.html',
+      },
+      {
+        source: '/lynx/',
+        destination: '/lynx/index.html',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
