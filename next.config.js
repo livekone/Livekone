@@ -15,20 +15,16 @@ const nextConfig = {
         destination: '/lp/aiweb/index.html',
       },
       {
-        source: '/lp/aiweb/',
-        destination: '/lp/aiweb/index.html',
+        source: '/lp/aiweb/:path*',
+        destination: '/lp/aiweb/:path*',
       },
-    ];
-  },
-  async rewrites() {
-    return [
       {
         source: '/lynx',
         destination: '/lynx/index.html',
       },
       {
-        source: '/lynx/',
-        destination: '/lynx/index.html',
+        source: '/lynx/:path*',
+        destination: '/lynx/:path*',
       },
     ];
   },
