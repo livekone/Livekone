@@ -5,12 +5,27 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: '2025-01-27.acacia',
 });
 
-export async function POST() {
+export async function POST(req: Request) {
   try {
+    const body = await req.json();
+    let priceId = '';
+
+    // リクエストデータに基づいて priceId を切り替える
+    switch (body.productType) {
+      case 'speedPlan':
+        priceId = 'price_1Qs21FEeA3chXwj0DUypSNqZ';
+        break;
+      case 'premiumPlan':
+        priceId = 'price_1Qs25dEeA3chXwj0PdZ8AHKY';
+        break;
+      default:
+        return NextResponse.json({ error: 'Invalid product type' }, { status: 400 });
+    }
+
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
-          price: 'price_1QmtLJEeA3chXwj084Wpba3P',
+          price: priceId,
           quantity: 1,
           adjustable_quantity: {
             enabled: true,
