@@ -13,10 +13,10 @@ export async function POST(req: Request) {
     // リクエストデータに基づいて priceId を切り替える
     switch (body.productType) {
       case 'speedPlan':
-        priceId = 'price_1Qs21FEeA3chXwj0DUypSNqZ';
+        priceId = 'price_1QsFmnEeA3chXwj0nFueSvFW';
         break;
       case 'premiumPlan':
-        priceId = 'price_1Qs25dEeA3chXwj0PdZ8AHKY';
+        priceId = 'price_1QsFn6EeA3chXwj0UmOTaMPW';
         break;
       default:
         return NextResponse.json({ error: 'Invalid product type' }, { status: 400 });
