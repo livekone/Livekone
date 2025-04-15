@@ -50,9 +50,21 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-              リブコネはゲーミフィケーションを取り入れたWEBアプリケーション開発を行っているスタートアップです。
+              <strong>AI Web制作事業</strong>
               <br />
-              また、JamstackによるWEBサイト制作、DAO構築、自社メディア運営を行っています。
+              最先端のAIツールとマーケティング戦略を活用した、成果重視のWebサイト・LP制作を提供。クライアントの課題に寄り添い、ビジネスの成長を加速させます。
+              <br />
+              <br />
+              <strong>AIタレント事業（Livpro）</strong>
+              <br />
+              LivproはAIとストリーミングの可能性を広げる 次世代タレントプロダクションです。
+              <br />
+              また、AIタレントと企業をマッチングするAIタレントマッチングサービス「AIney（アイニー）」を開発中です。
+              <br />
+              <br />
+              <strong>AI教育事業（AI WEB CAMP）</strong>
+              <br />
+              未経験から最前線へ。実務に直結するAI活用スキルを提供し、Web業界での活躍を目指す人材を育成。実践的なAIスキルとWeb制作ノウハウを習得できるカリキュラムを展開しています。
             </p>
             <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
@@ -81,7 +93,8 @@ export default async function Page() {
               <p className={styles.sectionDescription}>
                 リブコネは「その日その日を好きな夢をみて暮らすこと」を目指しています。
                 <br />
-                ゲーミフィケーションによって、効率の良い働き方を突き詰め、誰もが夢を追いかけられる世界を創造します。
+                働き方にゲーミフィケーションの概念を取り入れ、効率性と楽しさを両立。
+                誰もが“好き”を原動力に、自由に夢を追いかけられる世界を創造します。
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
@@ -94,11 +107,13 @@ export default async function Page() {
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>所在地</dt>
                 <dd className={styles.infoDescription}>
-                  〒812-0016
+                  〒810-0041
                   <br />
-                  福岡県福岡市博多区博多駅南
+                  福岡県福岡市中央区大名
                   <br />
-                  ２丁目９番１５－７１６号
+                  ２丁目６−１１
+                  <br />
+                  Fukuoka Growth Next
                 </dd>
               </dl>
               <dl className={styles.info}>
@@ -119,9 +134,11 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>We are hiring</h2>
             <p className={styles.sectionTitleJa}>採用情報</p>
             <p className={styles.sectionDescription}>
-              リブコネではフロー状態に入ることができる人材を求めています。
+              集中してるときが、一番自由。 リブコネは、そんな“夢中”を大事にできる人を求めています。
               <br />
-              効率の良い働き方を突き詰め、集中できる環境で活躍したい方は、ぜひご応募ください。最先端の技術を取り入れたスタートアップで共に働きましょう。
+              余計なストレスなく、最高のパフォーマンスを発揮したいなら。
+              <br />
+              このスタートアップで、その才能を試してみてください。
             </p>
             <ButtonLink href="/contact">お問い合わせへ</ButtonLink>
           </div>
