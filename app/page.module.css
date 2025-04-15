@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   overflow: hidden;
   padding: 190px 0;
@@ -92,7 +92,7 @@
 
 .businessImg {
   width: 400px;
-  height: auto;
+  height: 720px;
   border-radius: var(--border-radius);
 }
 
@@ -110,9 +110,9 @@
 }
 
 .aboutusImg {
-  width: 100%;
+  width: 70%;
   height: auto;
-  margin-left: -60%;
+  margin-left: -35%;
   border-radius: var(--border-radius);
 }
 
@@ -132,7 +132,7 @@
 }
 
 .hiringImg {
-  width: 480px;
+  width: 720px;
   height: auto;
   border-radius: var(--border-radius);
 }

@@ -35,7 +35,7 @@ export default async function Page() {
             リブコネが目指すのは「その日その日を好きな夢をみて暮らすこと」です
           </p>
         </div>
-        <Image className={styles.bgimg} src="/new-img-mv.gif" alt="" width={3600} height={1200} />
+        <Image className={styles.bgimg} src="/img-mv.jpg" alt="" width={3600} height={1200} />
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
@@ -70,7 +70,7 @@ export default async function Page() {
           </div>
           <Image
             className={styles.businessImg}
-            src="/img-business.png"
+            src="/img-business.jpg"
             alt=""
             width={1024}
             height={1024}
@@ -84,8 +84,8 @@ export default async function Page() {
               className={styles.aboutusImg}
               src="/img-aboutus.jpg"
               alt=""
-              width={6000}
-              height={4000}
+              width={1200}
+              height={800}
             />
             <div>
               <h2 className={styles.sectionTitleEn}>About Us</h2>
@@ -134,11 +134,12 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>We are hiring</h2>
             <p className={styles.sectionTitleJa}>採用情報</p>
             <p className={styles.sectionDescription}>
-              集中してるときが、一番自由。 リブコネは、そんな“夢中”を大事にできる人を求めています。
+              集中してるときが、一番自由。
               <br />
-              余計なストレスなく、最高のパフォーマンスを発揮したいなら。
+              リブコネは、そんな“夢中”を大事にできる人を求めています。
               <br />
-              このスタートアップで、その才能を試してみてください。
+              余計なストレスなく、最高のパフォーマンスを発揮したいなら、
+              リブコネでその才能を試してみてください。
             </p>
             <ButtonLink href="/contact">お問い合わせへ</ButtonLink>
           </div>
