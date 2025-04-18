@@ -29,6 +29,11 @@ export default function Menu() {
             </Link>
           </li>
           <li>
+            <Link href="/lp/aiweb" onClick={close}>
+              AI Web制作
+            </Link>
+          </li>
+          <li>
             <Link href="/members" onClick={close}>
               代表挨拶
             </Link>

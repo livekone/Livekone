@@ -12,6 +12,9 @@ export default function Footer() {
           <li className={styles.item}>
             <Link href="/business">事業内容</Link>
           </li>
+          <li>
+            <Link href="/lp/aiweb">AI Web制作</Link>
+          </li>
           <li className={styles.item}>
             <Link href="/members">代表挨拶</Link>
           </li>
