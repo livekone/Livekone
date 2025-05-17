@@ -36,6 +36,7 @@ export type Business = {
   description: string;
   image?: MicroCMSImage;
   link: string;
+  tab?: boolean;
 };
 
 // メタ情報の型定義

@@ -35,7 +35,7 @@ export default async function Page({ searchParams }: Props) {
                 </dt>
                 <dd className={styles.description}>{business.description}</dd>
                 <dd className={styles.action}>
-                  <ButtonLink href={business.link} isExternal={!!business.tab === true}>
+                  <ButtonLink href={business.link} isExternal={business.tab === true}>
                     サービスサイトへ
                   </ButtonLink>
                 </dd>
