@@ -12,9 +12,7 @@ export default function Page() {
         src="https://docs.google.com/forms/d/e/1FAIpQLSerjm-5Uu2YYxj5f_nCf4Hlua4lj6g78SzEh-cmrcd0OqIbbQ/viewform?embedded=true"
         width="100%"
         height="1200"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
+        style={{ border: 'none' }}
       >
         読み込んでいます…
       </iframe>
