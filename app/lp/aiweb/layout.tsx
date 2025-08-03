@@ -2,6 +2,10 @@ export const metadata = {
   title: 'AI Web制作｜合同会社リブコネ',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+type Props = {
+  children: React.ReactNode;
+};
+
+export default function RootLayout({ children }: Props) {
   return <div>{children}</div>;
 }

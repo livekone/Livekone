@@ -12,9 +12,8 @@ type Props = {
 export const revalidate = 60;
 
 export default async function Page({ searchParams }: Props) {
-  const data = await getBusinessList({
-    draftKey: searchParams.dk,
-  });
+  const { dk } = await searchParams;
+  const data = await getBusinessList({ draftKey: dk });
   return (
     <div className={styles.container}>
       {data.contents.length === 0 ? (
