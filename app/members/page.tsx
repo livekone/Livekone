@@ -3,14 +3,15 @@ import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
 type Props = {
-  searchParams: {
-    dk: string;
-  };
+  searchParams: Promise<{
+    dk?: string;
+  }>;
 };
 
 export const revalidate = 60;
 
 export default async function Page({ searchParams }: Props) {
+  const { dk } = await searchParams;
   return (
     <div className={styles.container}>
       <ul>
