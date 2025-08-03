@@ -4,9 +4,9 @@ import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
 type Props = {
-  searchParams: {
-    dk: string;
-  };
+  searchParams: Promise<{
+    dk?: string;
+  }>;
 };
 
 export const revalidate = 60;
