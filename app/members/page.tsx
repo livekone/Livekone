@@ -28,14 +28,17 @@ export default async function Page({ searchParams }: Props) {
             <dt className={styles.name}>山名 雄貴</dt>
             <dd className={styles.position}>最高経営責任者(CEO)</dd>
             <dd className={styles.profile}>
-              合同会社リブコネはゲーミフィケーションを取り入れたWEBアプリケーション開発を行っているスタートアップです。
+              合同会社リブコネは「AIで新しい職種を生み出す」ことをミッションに掲げるスタートアップです。
               <br />
               <br />
-              私はこれからの時代に承認欲求の競争ではない起業家のエンタメが必要だと考えています。
+              ノーコードツールを活用したAI
+              Web制作やAIタレントマーケティングサービスの開発に注力しています。
               <br />
               <br />
-              インフルエンサーとIT技術をかけあわせ「その日その日を好きな夢をみて暮らすこと」を目指します。
+              私はこれからの時代には、承認欲求を競うのではなく、起業家がエンターテインメント性をもって活動することが必要だと考えています。
               <br />
+              <br />
+              AIで新しい職種を生み出すことで、より多くの人が起業家として挑戦できる環境を実現していきます。
             </dd>
           </dl>
         </li>
@@ -53,7 +56,8 @@ export default async function Page({ searchParams }: Props) {
             <dt className={styles.name}>村瀬 元旗</dt>
             <dd className={styles.position}>最高戦略責任者(CSO)</dd>
             <dd className={styles.profile}>
-              成長戦略の策定・実行および市場分析を担当させていただいております。
+              ソフトテニス実業団
+              リブコネLYNXの設立をはじめ、eスポーツチームの運営経験を活かして、AIタレントを活用したマーケティング領域を主導しています。
             </dd>
           </dl>
         </li>
@@ -67,7 +71,10 @@ export default async function Page({ searchParams }: Props) {
           />
           <dl>
             <dt className={styles.name}>小原 峰輝</dt>
-            <dd className={styles.position}>最高技術責任者(CTO)</dd>
+            <dd className={styles.position}>最高インターン者(CIO)</dd>
+            <dd className={styles.profile}>
+              日本語・英語・中国語を自在に操るトリリンガルであり、その語学力と映像表現の専門性を活かして、AIタレントの企画・制作を担当しています。
+            </dd>
           </dl>
         </li>
       </ul>
