@@ -4,6 +4,7 @@ import { TOP_NEWS_LIMIT } from '@/app/_constants';
 import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
+import UnicornStudioScript from './_components/UnicornStudioScript';
 
 export const metadata = {
   title: '合同会社リブコネ',
@@ -18,24 +19,11 @@ export default async function Page() {
   return (
     <>
       <section className={styles.top}>
-        <div>
-          <h1 className={styles.title}>
-            <ruby className={styles.ruby}>
-              Live one day at a time
-              <rt className={styles.rt}>その日その日を好きな夢をみて暮らすこと</rt>
-            </ruby>
-          </h1>
-          <p className={styles.description}>
-            頭の冴えを取り戻そう
-            <br />
-            まどろみの中で働いてもこの世界は変わらないから
-            <br />
-            明日のことを気にする必要もないぐらい、今を大切に生きることができる
-            <br />
-            リブコネが目指すのは「その日その日を好きな夢をみて暮らすこと」です
-          </p>
-        </div>
-        <Image className={styles.bgimg} src="/img-mv.jpg" alt="" width={3600} height={1200} />
+        <div
+          data-us-project="sekK0ZSF7ZtE46Jt6NBm"
+          style={{ width: '2400px', height: '800px' }}
+        ></div>
+        <UnicornStudioScript />
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
