@@ -19,10 +19,7 @@ export default async function Page() {
   return (
     <>
       <section className={styles.top}>
-        <div
-          data-us-project="sekK0ZSF7ZtE46Jt6NBm"
-          style={{ width: '2400px', height: '800px' }}
-        ></div>
+        <div data-us-project="sekK0ZSF7ZtE46Jt6NBm" className={styles.unicornContainer}></div>
         <UnicornStudioScript />
       </section>
       <section className={styles.news}>
