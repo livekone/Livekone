@@ -92,13 +92,13 @@ export default async function Page() {
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>所在地</dt>
                 <dd className={styles.infoDescription}>
-                  〒810-0041
+                  〒812-0011
                   <br />
-                  福岡県福岡市中央区大名
+                  福岡県福岡市博多区博多駅前
                   <br />
-                  ２丁目６−１１
+                  １丁目２３−２
                   <br />
-                  Fukuoka Growth Next
+                  ParkFront博多駅前1丁目5F-B
                 </dd>
               </dl>
               <dl className={styles.info}>
