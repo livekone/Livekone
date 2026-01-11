@@ -5,20 +5,12 @@ export default function Page() {
     <table className={styles.table}>
       <tbody>
         <tr>
-          <th>事業者</th>
-          <td>合同会社リブコネ</td>
+          <th>屋号</th>
+          <td>リブコネ</td>
         </tr>
         <tr>
           <th>代表責任者</th>
           <td>山名 雄貴</td>
-        </tr>
-        <tr>
-          <th>所在地</th>
-          <td>
-            〒812-0016
-            <br />
-            福岡県福岡市博多区博多駅南２丁目９番１５－７１６号
-          </td>
         </tr>
         <tr>
           <th>メールアドレス</th>

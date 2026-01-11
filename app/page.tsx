@@ -82,32 +82,16 @@ export default async function Page() {
                 誰もが“好き”を原動力に、自由に夢を追いかけられる世界を創造します。
               </p>
               <dl className={styles.info}>
-                <dt className={styles.infoTitle}>社名</dt>
-                <dd className={styles.infoDescription}>合同会社リブコネ</dd>
+                <dt className={styles.infoTitle}>屋号</dt>
+                <dd className={styles.infoDescription}>リブコネ</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>設立</dt>
                 <dd className={styles.infoDescription}>２０２３年９月１５日</dd>
               </dl>
               <dl className={styles.info}>
-                <dt className={styles.infoTitle}>所在地</dt>
-                <dd className={styles.infoDescription}>
-                  〒812-0011
-                  <br />
-                  福岡県福岡市博多区博多駅前
-                  <br />
-                  １丁目２３−２
-                  <br />
-                  ParkFront博多駅前1丁目5F-B
-                </dd>
-              </dl>
-              <dl className={styles.info}>
                 <dt className={styles.infoTitle}>代表者</dt>
                 <dd className={styles.infoDescription}>山名 雄貴</dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>３０万円</dd>
               </dl>
             </div>
           </div>
