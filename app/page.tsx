@@ -7,7 +7,7 @@ import ButtonLink from '@/app/_components/ButtonLink';
 import UnicornStudioScript from './_components/UnicornStudioScript';
 
 export const metadata = {
-  title: '合同会社リブコネ',
+  title: 'リブコネ',
 };
 
 export const revalidate = 60;

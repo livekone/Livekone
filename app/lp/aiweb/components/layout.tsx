@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Web制作｜合同会社リブコネ',
+  title: 'AI Web制作｜リブコネ',
   icons: {
     // public/vite.svg を参照
     icon: '/vite.svg',

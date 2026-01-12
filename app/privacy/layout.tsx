@@ -2,7 +2,7 @@ import Hero from '@/app/_components/Hero';
 import Sheet from '@/app/_components/Sheet';
 
 export const metadata = {
-  title: 'プライバシーポリシー｜合同会社リブコネ',
+  title: 'プライバシーポリシー｜リブコネ',
 };
 
 type Props = {

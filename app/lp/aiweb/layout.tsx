@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'AI Web制作｜合同会社リブコネ',
+  title: 'AI Web制作｜リブコネ',
 };
 
 type Props = {

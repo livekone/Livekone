@@ -2,7 +2,7 @@ import Hero from '@/app/_components/Hero';
 import Sheet from '@/app/_components/Sheet';
 
 export const metadata = {
-  title: '代表挨拶｜合同会社リブコネ',
+  title: '代表挨拶｜リブコネ',
 };
 
 type Props = {

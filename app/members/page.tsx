@@ -28,7 +28,7 @@ export default async function Page({ searchParams }: Props) {
             <dt className={styles.name}>山名 雄貴</dt>
             <dd className={styles.position}>最高経営責任者(CEO)</dd>
             <dd className={styles.profile}>
-              合同会社リブコネは「AIで新しい職種を生み出す」ことをミッションに掲げるスタートアップです。
+              リブコネは「AIで新しい職種を生み出す」ことをミッションに掲げるスタートアップです。
               <br />
               <br />
               ノーコードツールを活用したAI
