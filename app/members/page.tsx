@@ -133,7 +133,9 @@ export default function Page() {
           {members.map((member, index) => (
             <div
               key={member.name}
-              ref={(el) => (itemRefs.current[index] = el)}
+              ref={(el) => {
+                itemRefs.current[index] = el;
+              }}
               className={`${styles.memberCard} ${index === activeIndex ? styles.activeCard : ''}`}
               onClick={() => goToSlide(index)}
             >
