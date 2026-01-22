@@ -35,7 +35,7 @@ export default function Menu() {
           </li>
           <li>
             <Link href="/members" onClick={close}>
-              代表挨拶
+              メンバー
             </Link>
           </li>
           <li>
