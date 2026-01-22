@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/lp/aiweb">AI Web制作</Link>
           </li>
           <li className={styles.item}>
-            <Link href="/members">代表挨拶</Link>
+            <Link href="/members">メンバー</Link>
           </li>
           <li className={styles.item}>
             <Link href="/contact">お問い合わせ</Link>

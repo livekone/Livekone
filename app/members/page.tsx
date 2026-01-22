@@ -1,83 +1,163 @@
+'use client';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
-type Props = {
-  searchParams: Promise<{
-    dk?: string;
-  }>;
-};
+const members = [
+  {
+    name: '山名 雄貴',
+    position: '最高経営責任者(CEO)',
+    profile: [
+      'ノーコードツールを活用したAI Web制作やAIタレントマーケティングサービスの開発に注力しています。',
+      'AIで新しい職種を生み出すことで非正規雇用者を救うことが目標です。',
+    ],
+    image: '/yuuki_yamana.jpg',
+  },
+  {
+    name: '村瀬 元旗',
+    position: '最高戦略責任者(CSO)',
+    profile: [
+      'ソフトテニス実業団 リブコネLYNXの設立をはじめ、eスポーツチームの運営経験を活かして、AIタレントを活用したマーケティング領域を主導しています。',
+    ],
+    image: '/genki_murase.jpg',
+  },
+  {
+    name: '小原 峰輝',
+    position: '最高インターン責任者(CIO)',
+    profile: [
+      '日本語・英語・中国語を自在に操るトリリンガルであり、その語学力と映像表現の専門性を活かして、AIタレントの企画・制作を担当しています。',
+    ],
+    image: '/takaaki_obara.jpg',
+  },
+];
 
-export const revalidate = 60;
+export default function Page() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const isProgrammaticScroll = useRef(false);
+  const scrollRaf = useRef<number | null>(null);
 
-export default async function Page({ searchParams }: Props) {
-  const { dk } = await searchParams;
+  useEffect(() => {
+    if (itemRefs.current[activeIndex]) {
+      const container = containerRef.current;
+      const activeItem = itemRefs.current[activeIndex];
+      if (container && activeItem) {
+        const containerWidth = container.offsetWidth;
+        const itemWidth = activeItem.offsetWidth;
+        const scrollLeft = activeItem.offsetLeft - (containerWidth - itemWidth) / 2;
+        isProgrammaticScroll.current = true;
+        container.scrollTo({
+          left: scrollLeft,
+          behavior: 'smooth',
+        });
+        window.setTimeout(() => {
+          isProgrammaticScroll.current = false;
+        }, 350);
+      }
+    }
+  }, [activeIndex]);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % members.length);
+    }, 4500);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, []);
+
+  const goToSlide = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) {
+      return;
+    }
+
+    const updateActiveFromScroll = () => {
+      if (isProgrammaticScroll.current) {
+        return;
+      }
+      if (!containerRef.current) {
+        return;
+      }
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const containerCenter = containerRect.left + containerRect.width / 2;
+      let closestIndex = activeIndex;
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      itemRefs.current.forEach((item, index) => {
+        if (!item) {
+          return;
+        }
+        const itemRect = item.getBoundingClientRect();
+        const itemCenter = itemRect.left + itemRect.width / 2;
+        const distance = Math.abs(containerCenter - itemCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      if (closestIndex !== activeIndex) {
+        setActiveIndex(closestIndex);
+      }
+    };
+
+    const onScroll = () => {
+      if (scrollRaf.current !== null) {
+        window.cancelAnimationFrame(scrollRaf.current);
+      }
+      scrollRaf.current = window.requestAnimationFrame(updateActiveFromScroll);
+    };
+
+    container.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      container.removeEventListener('scroll', onScroll);
+      if (scrollRaf.current !== null) {
+        window.cancelAnimationFrame(scrollRaf.current);
+        scrollRaf.current = null;
+      }
+    };
+  }, [activeIndex]);
+
   return (
     <div className={styles.container}>
-      <ul>
-        <h2 className={styles.sectionTitleEn}>代表メッセージ</h2>
-        <li key="1" className={styles.list}>
-          <Image
-            src="/yuuki_yamana.jpg"
-            alt=""
-            width={1024}
-            height={1024}
-            className={styles.image}
-          />
-          <dl>
-            <dt className={styles.name}>山名 雄貴</dt>
-            <dd className={styles.position}>最高経営責任者(CEO)</dd>
-            <dd className={styles.profile}>
-              リブコネは「AIで新しい職種を生み出す」ことをミッションに掲げるスタートアップです。
-              <br />
-              <br />
-              ノーコードツールを活用したAI
-              Web制作やAIタレントマーケティングサービスの開発に注力しています。
-              <br />
-              <br />
-              私はこれからの時代には、承認欲求を競うのではなく、起業家がエンターテインメント性をもって活動することが必要だと考えています。
-              <br />
-              <br />
-              AIで新しい職種を生み出すことで、より多くの人が起業家として挑戦できる環境を実現していきます。
-            </dd>
-          </dl>
-        </li>
-        <h2 className={styles.sectionTitleEn}>Member</h2>
-        <p className={styles.sectionTitleJa}>メンバー</p>
-        <li key="2" className={styles.list}>
-          <Image
-            src="/genki_murase.jpg"
-            alt=""
-            width={1024}
-            height={1024}
-            className={styles.image}
-          />
-          <dl>
-            <dt className={styles.name}>村瀬 元旗</dt>
-            <dd className={styles.position}>最高戦略責任者(CSO)</dd>
-            <dd className={styles.profile}>
-              ソフトテニス実業団
-              リブコネLYNXの設立をはじめ、eスポーツチームの運営経験を活かして、AIタレントを活用したマーケティング領域を主導しています。
-            </dd>
-          </dl>
-        </li>
-        <li key="3" className={styles.list}>
-          <Image
-            src="/takaaki_obara.jpg"
-            alt=""
-            width={1024}
-            height={1024}
-            className={styles.image}
-          />
-          <dl>
-            <dt className={styles.name}>小原 峰輝</dt>
-            <dd className={styles.position}>最高インターン者(CIO)</dd>
-            <dd className={styles.profile}>
-              日本語・英語・中国語を自在に操るトリリンガルであり、その語学力と映像表現の専門性を活かして、AIタレントの企画・制作を担当しています。
-            </dd>
-          </dl>
-        </li>
-      </ul>
+      <div className={styles.slideshowWrapper}>
+        <div className={styles.slideshowContainer} ref={containerRef}>
+          {members.map((member, index) => (
+            <div
+              key={member.name}
+              ref={(el) => (itemRefs.current[index] = el)}
+              className={`${styles.memberCard} ${index === activeIndex ? styles.activeCard : ''}`}
+              onClick={() => goToSlide(index)}
+            >
+              <Image
+                src={member.image}
+                alt=""
+                width={500}
+                height={500}
+                className={styles.memberImage}
+              />
+              <div className={styles.memberInfo}>
+                <h3 className={styles.name}>{member.name}</h3>
+                <p className={styles.position}>{member.position}</p>
+                <div className={styles.profile}>
+                  {member.profile.map((paragraph, pIndex) => (
+                    <p key={pIndex}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className={styles.footer}>
         <h2 className={styles.message}>We are hiring</h2>
         <p>最先端の技術を取り入れたスタートアップで共に働きましょう。</p>
