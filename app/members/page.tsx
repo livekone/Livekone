@@ -7,7 +7,7 @@ import ButtonLink from '@/app/_components/ButtonLink';
 const members = [
   {
     name: '山名 雄貴',
-    position: '最高経営責任者(CEO)',
+    position: '最高AI責任者(CAIO)',
     profile: [
       'ノーコードツールを活用したAI Web制作やAIタレントマーケティングサービスの開発に注力しています。',
       'AIで新しい職種を生み出すことで非正規雇用者を救うことが目標です。',
