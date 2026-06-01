@@ -2,6 +2,7 @@
   display: flex;
   color: #fff;
   gap: 40px;
+  font-weight: bold;
 }
 
 .itemsTop {
@@ -27,6 +28,11 @@
     background-color: var(--color-bg-painted);
     color: var(--color-text-unpainted);
     padding: 24px 16px;
+    z-index: 2000;
+  }
+
+  .nav.open a {
+    color: var(--color-text-unpainted);
   }
 
   .items {
@@ -49,5 +55,10 @@
     position: absolute;
     top: 24px;
     right: 16px;
+    z-index: 1;
+  }
+
+  .close img {
+    filter: brightness(0) invert(1) !important;
   }
 }

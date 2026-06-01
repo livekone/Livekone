@@ -1,10 +1,14 @@
 import Image from 'next/image';
+import { Roboto_Slab } from 'next/font/google';
 import { getNewsList } from '@/app/_libs/microcms';
 import { TOP_NEWS_LIMIT } from '@/app/_constants';
 import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
-import UnicornStudioScript from './_components/UnicornStudioScript';
+
+const robotoSlab = Roboto_Slab({
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'リブコネ',
@@ -19,8 +23,12 @@ export default async function Page() {
   return (
     <>
       <section className={styles.top}>
-        <div data-us-project="sekK0ZSF7ZtE46Jt6NBm" className={styles.unicornContainer}></div>
-        <UnicornStudioScript />
+        <Image src="/barbaracascao-city.jpg" alt="" fill priority className={styles.bgImage} />
+        <h1 className={`${styles.title} ${robotoSlab.className}`}>
+          Live one day
+          <br />
+          at a time
+        </h1>
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
