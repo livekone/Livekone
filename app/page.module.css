@@ -28,6 +28,8 @@
   color: transparent;
   display: inline-block;
   -webkit-text-stroke: 1px #fff;
+  /* アニメーション中の文字のぼやけを防止 */
+  backface-visibility: hidden;
   animation: fadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 

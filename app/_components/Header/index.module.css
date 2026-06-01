@@ -26,6 +26,8 @@
 .logo {
   height: 32px;
   width: auto;
+  /* iOS SafariでのSVGレンダリングのぼやけを防止 */
+  transform: translateZ(0);
 }
 
 @media (max-width: 640px) {
